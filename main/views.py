@@ -8,10 +8,10 @@ def say_hello(request):
 
 
 def runtest(request):
-    if request.method == 'POST' and 'run_script' in request.POST:
-        from test.py import test
-        testValue = test()
-        return render(request, 'hello.html', {'name': testValue })
+    return render(request, 'test.html', {'name': test()})
 
 def test():
     return "test"
+
+
+##
