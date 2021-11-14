@@ -80,8 +80,8 @@ def MLEngine(request):
 
 
     Data = pandas.read_csv('Rcardiotrain.csv')
-    x = Data.iloc[:, :-1]
-    y = Data.iloc[:, -1]
+    x = Data.iloc[:, :-1].values
+    y = Data.iloc[:, -1].values
 
     x_training, x_testing, y_training, y_testing = train_test_split(x, y, test_size = 0.20, random_state = 42)
 
