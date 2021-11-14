@@ -3,8 +3,13 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from numpy import greater
 
-
 # Create your views here.
+def main_notebook(request):
+    return render(request, 'ML_Hackathon_Final.html')
+
+def graph_notebook(request):
+    return render(request, 'Creating_the_Graphs.html')
+
 def say_hello(request):
 
     return render(request, 'hello.html')
