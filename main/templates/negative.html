@@ -1,7 +1,8 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang ="en">
 <head>
-    <link rel="stylesheet" href="negative.css" />
+    <link rel="stylesheet" type="text/css" href="{% static '/css/negative.css' %}"></head>
 </head>
 <body>
     <div class="header">
@@ -72,14 +73,16 @@
             <h2>Analysis of Data Used</h2>
             
             <h3>Correlation between all data points</h3>
-            <img src="img/fullheatmap.png" alt="Heat graph showing the correlation between all data points" width="800">
+            <link rel="stylesheet" type="text/css" href="{% static '/css/positive.css' %}"></head>
+
+            <img src="{% static '/images/fullheatmap.png' %}" alt="Heat graph showing the correlation between all data points" width="800">
             <p>
                 This graph represents how much influence certain each variable has on another.
             </p>
             <br></br>
 
             <h3>Correlation between cardiovascular disease and the data points</h3>
-            <img src="img/smallheatmap.png" alt="Heat graph showing the correlation between cardiovascular disease and the data points" width="800">
+            <img src="{% static '/images/smallheatmap.png' %}"  alt="Heat graph showing the correlation between cardiovascular disease and the data points" width="800">
             <p>
                 This graph represents how much influence certain factors have on the potential of
                 having a cardiovascular disease.
@@ -90,7 +93,7 @@
             <br></br>
 
             <h3>Age of patients who tested positive for cardiovascular disease</h3>
-            <img src="img/agegraph.png" alt="Bar graph showing the age of patients who tested positive for cardiovascular disease" width="800">
+            <img src="{% static '/images/agegraph.png' %}" alt="Bar graph showing the age of patients who tested positive for cardiovascular disease" width="800">
             <p>
                 For example, this graph depicts the ages of the patients who were tested positive.
             </p>
