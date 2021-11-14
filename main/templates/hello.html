@@ -16,11 +16,11 @@
 			{{form}}
 			<span>
 				<label for="your_name" name="name">Your name:</label>
-				<input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+				<input id="your_name" type="text" name="your_name" value="{{ current_name }}" required>
 			</span>
 			<span>
 				<label for="our_age">Your age (years): </label>
-				<input id="your_age" type="number" min="0" name="your_age" value="{{ current_age }}">
+				<input id="your_age" type="number" min="0" name="your_age" value="{{ current_age }}" required>
 			</span>
 			<fieldset>
 				<legend>What was your sex at birth?</legend>
@@ -35,19 +35,19 @@
 			</label></label></fieldset>
 			<span>
 				<label for="your_height">Your height (cm): </label>
-				<input id="your_height" type="number" min="0" name="your_height" value="{{ current_weight }}">
+				<input id="your_height" type="number" min="0" name="your_height" value="{{ current_weight }}" required>
 			</span>
 			<span>
 				<label for="your_weight">Your weight (kg): </label>
-				<input id="your_weight" type="number" min="0" name="your_weight" value="{{ current_weight }}">
+				<input id="your_weight" type="number" min="0" name="your_weight" value="{{ current_weight }}" required>
 			</span>
 			<span>
 				<label for="your_sbp">Your systolic blood pressure (mmHg): </label>
-				<input id="your_sbp" type="number" min="0" name="your_sbp" value="{{ current_sbp }}">
+				<input id="your_sbp" type="number" min="0" name="your_sbp" value="{{ current_sbp }}" required>
 			</span>
 			<span>
 				<label for="your_dbp">Your diastlolic blood pressure (mmHg): </label>
-				<input id="your_dbp" type="number" min="0" name="your_dbp" value="{{ current_dbp }}"> 
+				<input id="your_dbp" type="number" min="0" name="your_dbp" value="{{ current_dbp }}" required> 
 			</span>
 			<fieldset class="three-items">
 				<legend>What is your cholestrol level?</legend>

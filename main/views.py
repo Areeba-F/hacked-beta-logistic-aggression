@@ -10,8 +10,7 @@ def main_notebook(request):
 def graph_notebook(request):
     return render(request, 'Creating_the_Graphs.html')
 
-def say_hello(request):
-
+def main_page(request):
     return render(request, 'hello.html')
 
 def cardio_test(request): 
