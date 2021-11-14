@@ -2,15 +2,29 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext
 from numpy import greater
-from .forms import MedicalForm
 
 # Create your views here.
 def say_hello(request):
+
     return render(request, 'hello.html')
 
 def runtest(request): 
-    ## initialize variables from form
     name = request.POST['your_name']
+    results = MLEngine(request) 
+    if (results == True):
+        return render(request, 'positive.html')
+    else:
+        return render(request, 'negative.html', {'name': name })
+
+def MLEngine(request):
+    import pandas as pandas
+    import numpy as numpy
+    import matplotlib.pyplot as plot
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.linear_model import LogisticRegression    
+    from sklearn.metrics import accuracy_score
+    ## initialize variables from form
     age = int(request.POST['your_age'])
     age = age * 365
     height = int(request.POST['your_height'])
@@ -60,16 +74,6 @@ def runtest(request):
     else:
         exercise = 0 
          
-    results = MLEngine(age, gender, height, weight, sbp, dbp, cholestoral, glucose, smoke, drink, exercise) 
-    if (results == True):
-        return render(request, 'positive.html')
-    else:
-        return render(request, 'negative.html', {'name': gender })
-
-def MLEngine(age, gender, height, weight, sbp, dbp, cholestoral, glucose, smoke, drink, exercise):
-    import pandas as pandas
-    import numpy as numpy
-    import matplotlib.pyplot as plot
     print(age, gender, height, weight, sbp, dbp, cholestoral, glucose, smoke, drink, exercise)
 
 
@@ -78,20 +82,16 @@ def MLEngine(age, gender, height, weight, sbp, dbp, cholestoral, glucose, smoke,
     x = Data.iloc[:, :-1]
     y = Data.iloc[:, -1]
 
-    from sklearn.model_selection import train_test_split
     x_training, x_testing, y_training, y_testing = train_test_split(x, y, test_size = 0.20, random_state = 42)
 
-    from sklearn.preprocessing import StandardScaler
     scaler = StandardScaler()
     x_training = scaler.fit_transform(x_training)
     x_testing = scaler.transform(x_testing)
 
-    from sklearn.linear_model import LogisticRegression
     model = LogisticRegression()
     model.fit(x_training, y_training) # we fit/train/teach the model with our training data
     predicted_results = model.predict(x_testing)
 
-    from sklearn.metrics import accuracy_score
     accuracy_score(y_testing, predicted_results)
 
     result = model.predict(scaler.transform([[age, gender, height, weight, sbp, dbp, cholestoral, glucose, smoke, drink, exercise]]))
