@@ -7,7 +7,7 @@ from .forms import MedicalForm
 def say_hello(request):
     forms = MedicalForm()
     x = 1
-    return render(request, 'hello.html', {'name': x }), {'forms': forms}
+    return render(request, 'hello.html', {'name': x }, {'forms': forms})
 
 
 def runtest(request): 
