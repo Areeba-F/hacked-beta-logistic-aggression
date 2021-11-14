@@ -1,7 +1,7 @@
 .header{
     background-color:rgb(190, 136, 100);
     width:auto;
-    height:80px;
+    height:15%;
     color:rgb(65, 44, 15); 
     text-align:center;
     padding: 15px 0;
@@ -14,10 +14,10 @@
 }
 
 .side_bar {
-    width:250px;
+    width:20%;
     position: fixed;
     height:500px;
-    font-size: 15px;
+    font-size: 80%;
     vertical-align: middle;
     text-align:center;
     background-color:rgb(190, 136, 100);   
@@ -30,17 +30,17 @@
     text-align:center;
     position: center;
     background-color:burlywood;
-    width: 1000px;
-    height:90px;
+    width: 80%;
+    height:15%;
     margin-top: 20px;
     padding-top: 20px;
 
 }
 .steps{
     text-align:center;
-    width: 1000px;
+    width: 80%;
     background-color:burlywood;
-    height:520px;
+    height:auto;
     margin-top: 20px;
     padding-top: 20px;
 }
@@ -48,7 +48,7 @@
 .info {
 
     text-align:center;
-    width: 1000px;
+    width: 80%;
     background-color:burlywood;
     height:auto;
     color:rgb(65, 44, 15);
