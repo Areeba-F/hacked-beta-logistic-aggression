@@ -22,3 +22,5 @@ Based on the prediction, the application recommends potential next steps with
 links to resources that a person can use to get potential help or get more
 information about cardiovascular disease.
 
+Note: Make sure to download `Rcardiotrain.csv` when downloading the project.
+
