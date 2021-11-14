@@ -1,43 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CVD Predictor Input Form</title>
+		<link rel="stylesheet" href="hello.css">
+	</head>
+	<body>
+		<h1><span>Welcome to our Cardiovascular Disease Predictor</span></h1>
 
-<h1> Welcome to our Caridovascular Disease Predictor</h1>
- 
-<!-- ask the user to input there age, gender, height, weight, systolm diastol, chol, glu, smoking, alcohol consumption and exercise -->
-<!-- create a form -->
-
-<form action="cardio_test" method="post" name="cardio_form">
-    {% csrf_token %}
-    {{form}}
-    <label for="your_name" name= "name">Your name: </label>
-    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
-    <label for="our_age">Your age: </label>
-    <input id="your_age" type="number" name="your_age" value="{{ current_age }}">
-    <legend>What was your sex at birth?</legend>
-    <input type="radio" name="gender" value="Male" checked>Male<br>
-    <input type="radio" name="gender" value="Female">Female<br>
-    <label for="your_height">Your height: </label>
-    <input id="your_height" type="number" name="your_height" value="{{ current_weight }}">
-    <label for="your_weight">Your weight: </label>
-    <input id="your_weight" type="number" name="your_weight" value="{{ current_weight }}">
-    <label for="your_sbp">Your systolic blood pressure: </label>
-    <input id="your_sbp" type="number" name="your_sbp" value="{{ current_sbp }}">
-    <label for="your_dbp">Your diastlolic blood pressure: </label>
-    <input id="your_dbp" type="number" name="your_dbp" value="{{ current_dbp }}"> 
-    <legend>What is your cholestrol level?</legend>
-    <input type="radio" name="cholestoral" value="norm" checked>Normal<br>
-    <input type="radio" name="cholestoral" value="abvnorm">Above Normal<br>
-    <input type="radio" name="cholestoral" value="wellabvnorm">Well Above Normal<br>
-    <legend>What is your glucose level?</legend>
-    <input type="radio" name="glucose" value="norm" checked>Normal<br>
-    <input type="radio" name="glucose" value="abvnorm">Above Normal<br>
-    <input type="radio" name="glucose" value="wellabvnorm">Well Above Normal<br>
-    <legend>Do you smoke?</legend>
-    <input type="radio" name="smoke" value="Yes" checked>Yes<br>
-    <input type="radio" name="smoke" value="No">No<br>
-    <legend>Do you drink?</legend>
-    <input type="radio" name="drink" value="Yes" checked>Yes<br>
-    <input type="radio" name="drink" value="No">No<br>
-    <legend>Do you exercise regularly?</legend>
-    <input type="radio" name="exercise" value="Yes" checked>Yes<br>
-    <input type="radio" name="exercise" value="No">No<br>
-    <input type="submit" value="OK">
-</form>
+		<!-- ask the user to input there age, gender, height, weight, systolm diastol, chol, glu, smoking, alcohol consumption and exercise -->
+		<!-- create a form -->
+		
+		<form action="cardio_test" method="post" name="cardio_form">
+			{% csrf_token %}
+			{{form}}
+			<span>
+				<label for="your_name" name="name">Your name:</label>
+				<input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			</span>
+			<span>
+				<label for="our_age">Your age (years): </label>
+				<input id="your_age" type="number" min="0" name="your_age" value="{{ current_age }}">
+			</span>
+			<fieldset>
+				<legend>What was your sex at birth?</legend>
+				<label>
+					<input type="radio" name="gender" value="Male" checked="">
+					Male
+				</label>
+				<label>
+					<input type="radio" name="gender" value="Female">
+					Female
+				<label>
+			</label></label></fieldset>
+			<span>
+				<label for="your_height">Your height (cm): </label>
+				<input id="your_height" type="number" min="0" name="your_height" value="{{ current_weight }}">
+			</span>
+			<span>
+				<label for="your_weight">Your weight (kg): </label>
+				<input id="your_weight" type="number" min="0" name="your_weight" value="{{ current_weight }}">
+			</span>
+			<span>
+				<label for="your_sbp">Your systolic blood pressure (mmHg): </label>
+				<input id="your_sbp" type="number" min="0" name="your_sbp" value="{{ current_sbp }}">
+			</span>
+			<span>
+				<label for="your_dbp">Your diastlolic blood pressure (mmHg): </label>
+				<input id="your_dbp" type="number" min="0" name="your_dbp" value="{{ current_dbp }}"> 
+			</span>
+			<fieldset class="three-items">
+				<legend>What is your cholestrol level?</legend>
+				<label>
+					<input type="radio" name="cholestoral" value="norm" checked="">
+					Normal
+				</label>
+				<label>
+					<input type="radio" name="cholestoral" value="abvnorm">
+					Above Normal
+				</label>
+				<label>
+					<input type="radio" name="cholestoral" value="wellabvnorm">
+					Well Above Normal
+				</label>
+			</fieldset>
+			<fieldset class="three-items">
+				<legend>What is your glucose level?</legend>
+				<label>
+					<input type="radio" name="glucose" value="norm" checked="">
+					Normal
+				</label>
+				<label>
+					<input type="radio" name="glucose" value="abvnorm">
+					Above Normal
+				</label>
+				<label>
+					<input type="radio" name="glucose" value="wellabvnorm">
+					Well Above Normal
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Do you smoke?</legend>
+				<label>
+					<input type="radio" name="smoke" value="Yes" checked="">
+					Yes
+				</label>
+				<label>
+					<input type="radio" name="smoke" value="No">
+					No
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Do you drink?</legend>
+				<label>
+					<input type="radio" name="drink" value="Yes" checked="">
+					Yes
+				</label>
+				<label>
+					<input type="radio" name="drink" value="No">
+					No
+				</label>
+			</fieldset>
+			<fieldset>
+				<legend>Do you exercise regularly?</legend>
+				<label>
+					<input type="radio" name="exercise" value="Yes" checked="">
+					Yes
+				</label>
+				<label>
+					<input type="radio" name="exercise" value="No">
+					No
+				</label>
+			</fieldset>
+			<input type="submit" value="OK">
+		</form>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+h1 {
+	background-color: rgb(190, 136, 100);
+	color: rgb(65, 44, 15);
+	display: flex;
+	flex-direction: column;
+	height: 80px;
+	justify-content: center;
+	padding: 15px 0;
+}
+
+h1 > span {
+	text-align: center;
+}
+
+form {
+	background-color: burlywood;
+	color: rgb(65, 44, 15);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px 0;
+}
+
+form > span, form > fieldset {
+	box-sizing: border-box;
+	margin: 6px;
+	padding: 8px 24px;
+	width: 70%;
+	max-width: 580px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid rgb(190, 136, 100);
+	border-radius: 5px;
+	box-shadow: 0 0 3px 0 rgba(190, 136, 100, 0.5);
+}
+
+form > fieldset {
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+form > fieldset.three-items {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+form > fieldset > legend {
+	background-color: burlywood;
+}
+
+form > fieldset > label {
+	margin-right: 32px;
+}
+
+input {
+	background-color: rgb(225, 200, 183);
+	color: rgb(65, 44, 15);
+	border: none;
+	padding: 4px;
+	box-shadow: 0 0 3px 1px rgba(190, 136, 100, 0.5);
+}
+
+input:hover {
+	box-shadow: 0 0 3px 2px rgba(190, 136, 100, 0.7);
+}
+
+input:focus {
+	outline: rgba(190, 136, 100, 0.9) solid 1px;
+	box-shadow: 0 0 4px 3px rgba(190, 136, 100, 0.9);
+}
+
+input[type="submit"] {
+	width: 40%;
+	max-width: 300px;
+	margin: 6px;
+	padding: 4px;
+	border: 1px solid transparent;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+	border: 1px solid rgba(190, 136, 100, 0.5);
+	box-shadow: 0 0 6px 2px rgba(190, 136, 100, 0.7);
+}
+
+input[type="submit"]:active {
+	background-color: rgb(215, 180, 157);
+}
