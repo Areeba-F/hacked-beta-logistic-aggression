@@ -7,11 +7,10 @@ from .forms import MedicalForm
 def say_hello(request):
     forms = MedicalForm()
     x = 1
-    return render(request, 'hello.html', {'name': x }, {'forms': forms})
-
+    return render(request, 'hello.html', {'name': x })
 
 def runtest(request): 
-    name = myForm.cleaned_data['name']
+    name = request.POST['your_name']
     results = False
     if (results == True):
         return render(request, 'positive.html')
@@ -22,4 +21,4 @@ def test():
     return "test"
 
 
-# need to clean age, no days
+# need to clean age, no dayst
