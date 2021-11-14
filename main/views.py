@@ -3,12 +3,13 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from numpy import greater
 
+
 # Create your views here.
 def say_hello(request):
 
     return render(request, 'hello.html')
 
-def runtest(request): 
+def cardio_test(request): 
     name = request.POST['your_name']
     results = MLEngine(request) 
     if (results == True):
@@ -100,6 +101,3 @@ def MLEngine(request):
         return False
     elif result ==1:
         return True
-
-
-# need to clean age, no dayst  
