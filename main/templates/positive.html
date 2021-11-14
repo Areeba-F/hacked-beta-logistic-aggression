@@ -1,43 +1,112 @@
 <!DOCTYPE html>
 <html lang ="en">
 <head>
- 
     <link rel="stylesheet" href="positive.css" />
-</html>
+</head>
 <body>
     <div class="header">
-        <h1>Caridovascular Disease Predictor</h1>
+        <h1>Cardiovascular Disease Predictor</h1>
     </div>
     <div class="wrapper">
         
         <div class="side_bar">
             <h2>Your Results:</h2>
-            <break></break>
-            <h1>Possible Positive Result Detected</h1>
+            <h2>________________</h2>
+            <h2>Possible Positive Result Detected</h2>
+            <h2>________________</h2>
+            <h3>You have been tested for a high risk of cardiovascular disease. </h3>
+            <h3>We highly encourage you to seek immediate attention from a medical professional.</h3>
+
+            <h3>Please take steps to locate your nearest medical clinic.</h3>
+        </div>
+        <div class="result">
+            <h2>Possible Positive Result Detected</h2>
         </div>
         <div class="steps">
-            <h1>Next steps</h1>
+            <h2>Next steps</h2>
+            <h3>You have been tested for a high risk of cardiovascular disease.</h3>
+            <h3>We highly encourage you to seek immediate attention from a medical professional.</h3>
+
+            <h3>Please take steps to locate your nearest medical clinic.</h3>
+                <br></br>
+                
+                <h3>As well, a few resources below to protect yourself and others from cardiovascular disease:</h3>
+
+                
+                <a href="https://www.heartandstroke.ca/heart-disease/conditions?gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-
+                TsaYUb9CNtBzcLNf5bJLNPSQCs5AobQaq-51Y3kTFuvnqhD_FEdWEaAvnEEALw_wcB&gclsrc=aw.ds" 
+                target="blank">Heart & Stroke Foundation — Cardiovascular Disease</a>
+                <br></br>
+                <a href="https://www.canada.ca/en/public-health/services/publications/diseases-conditions/heart-disease-canada.html" 
+                target="blank">Public Health Agency of Canada — Government of Canada</a>
+                <br></br>
+                <a href="https://www.albertahealthservices.ca/info/Page7735.aspx" 
+                target="blank">Cardiovascular Disease Patient Resources — Alberta Health Services</a>
+                <br></br>
+                <a href="https://thrombosiscanada.ca/secondary-prevention-info/?
+                gclid=Cj0KCQiA4b2MBhD2ARIsAIrcB-S6DlDrm-Nhc7ZfA9PeK2VugwY0Pdhh9ROqUOrNaWfVerlJ5fGt9wEaAhJwEALw_wcB" 
+                target="blank">Patient Information Resource — How Secondary Protection Can Keep You Healthy</a>
+                <br></br>
+                <a href="https://www.publichealthontario.ca/en/diseases-and-conditions
+                /chronic-diseases-and-conditions/cardiovascular-disease" 
+                target="blank">Cardiovascular Disease — Public Health Ontario</a>
+                <br></br>
+                <a href="https://www.cdc.gov/heartdisease/materials_for_patients.htm" 
+                target="blank">Heart Disease Patient Education — Centers for Disease Control and Prevention</a>
+
         </div>
-        <break></break>
         
     </div>
     <div style=margin-top:50px; class="info">
         <div class="info_writing"></div>
             <h2>How Were the Results Calculated?</h2>
-            <p>The results from this detected were generated based on a logistic 
+            <p>The results from this detection were generated based on a logistic 
                 regression machine learning algorithim. This was done by analysizing previously 
-                collected data regarding patients age, gender, height, weight, Systolic 
-                and Diastolic blood pressure, Cholesterol levels, Glucose levels, 
-                Smoking rate, Alcohol intact, physical activity, and finally, whether 
+                collected data regarding patients age, gender, height, weight, systolic 
+                and diastolic blood pressure, cholesterol levels, glucose levels, 
+                smoking rate, alcohol intact, physical activity, and finally, whether 
                 or not they had caridovascular disease. Based on the results, the 
-                algorthim then learned how to predict such cases with a PRECENTAGE HERE
+                algorthim then learned how to predict such cases with a roughly 70%
                 accuracy rate.  
             </p>
+            <br></br>
+            <h2>Analysis of Data Used</h2>
+            
+            <h3>Correlation between all data points</h3>
+            <img src="img/fullheatmap.png" alt="Heat graph showing the correlation between all data points" width="800">
+            <p>
+                This graph represents how much influence certain each variable has on another.
+            </p>
+            <br></br>
+
+            <h3>Correlation between cardiovascular disease and the data points</h3>
+            <img src="img/smallheatmap.png" alt="Heat graph showing the correlation between cardiovascular disease and the data points" width="800">
+            <p>
+                This graph represents how much influence certain factors have on the potential of
+                having a cardiovascular disease.
+            </p>
+            <p>
+                Certain factors, such as age, cholesterol, and weight have the highest influence relative to the others variables
+            </p>
+            <br></br>
+
+            <h3>Age of patients who tested positive for cardiovascular disease</h3>
+            <img src="img/agegraph.png" alt="Bar graph showing the age of patients who tested positive for cardiovascular disease" width="800">
+            <p>
+                For example, this graph depicts the ages of the patients who were tested positive.
+            </p>
+            <p>
+                There is a clear trend in the range of ages where cardiovascular disease is more common.
+            </p>
+            <p>
+                Specifically the range between 50 and 65 years of age.
+            </p>
+            <br></br>
+            <br></br>
+
         </div>
-        
-        
             
     </div>
-    <img scr="fullheatmap.png" alt="Heat graph showing the correlation between all data points"></img>
+    
 </body>
 </html>
